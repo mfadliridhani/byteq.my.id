@@ -115,7 +115,7 @@
 <li class="menu-item">
     <ul class="menu-inner py-1">
         <li class="menu-item">
-            <a href="/admin/dashboard/categories" class="menu-link {{ Request::is('admin/dashboard/categories*') ? 'active' : '' }}">
+            <a href="/admin/dashboard/accounts" class="menu-link {{ Request::is('admin/dashboard/acounts*') ? 'active' : '' }}">
                 <i class="menu-icon tf-icons bi bi-person-plus"></i>
                 <div data-i18n="Analytics">My acount</div>
             </a>

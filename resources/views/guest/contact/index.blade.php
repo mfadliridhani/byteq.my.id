@@ -25,7 +25,7 @@
 
                     <form
                     method="POST"
-                    action="/contacts/"
+                    action="/contacts"
                     />
                     @method('post')
                     @csrf

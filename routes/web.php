@@ -9,6 +9,7 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\PasswordController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\AdminUserController;
 use App\Http\Controllers\GuestHomeController;
 use App\Http\Controllers\GuestResumeController;
 use App\Http\Controllers\GuestProjectController;
@@ -48,13 +49,14 @@ Route::resource('admin/dashboard/blogs', DashboardBlogController::class)->middle
 Route::resource('admin/dashboard/categories', CategoryController::class)->middleware('admin');
 Route::resource('admin/dashboard/contacts', DashboardContactContrlloer::class)->middleware('admin');
 Route::resource('admin/dashboard/homes', HomeController::class)->middleware('admin');
+Route::resource('admin/dashboard/accounts', AdminUserController::class)->middleware('admin');
 
 Route::get('admin/dashboard', function () {
     $data = [
         'tittle' => 'Dashboard'
     ];
     return view('admin/dashboard/index', $data);
-})->middleware('admin');
+})->middleware('auth');
 
 // Guest
 Route::get('/', [GuestHomeController::class, 'index']);

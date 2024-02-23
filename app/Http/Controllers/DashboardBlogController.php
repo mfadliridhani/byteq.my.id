@@ -121,7 +121,7 @@ class DashboardBlogController extends Controller
         Blog::where('id', $blog->id)
             ->update($validateData);
 
-        return redirect('/admin/dashboard/blogs')->with('status', 'c');
+        return redirect('/admin/dashboard/blogs')->with('status', 'Post has been successfully updated!');
     }
 
     /**

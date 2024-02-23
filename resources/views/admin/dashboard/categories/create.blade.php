@@ -29,7 +29,7 @@
                     <div class="card mb-4">
                             <form
                                 method="POST"
-                                action="/admin/dashboard/blogs/"
+                                action="/admin/dashboard/blogs"
                                 enctype="multipart/form-data"
                             >
                             @csrf
