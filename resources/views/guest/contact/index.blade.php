@@ -21,7 +21,7 @@
                 </p>
             </div>
             <div class="row gx-5 justify-content-center">
-                <div class="col-lg-8 col-xl-6">
+                <div class="col-sm-11 col-md-11 col-lg-8 col-xl-6">
 
                     <form
                     method="POST"

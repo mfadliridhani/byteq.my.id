@@ -214,7 +214,7 @@
                                     
                                     <div class="mb-3 col-md-6 form-password-toggle">
                                         <label class="form-label" for="password"
-                                        >Repeat password</label
+                                        >Repeat Password</label
                                         >
                                         <div class="input-group input-group-merge">
                                             <input
