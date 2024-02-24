@@ -18,7 +18,7 @@
                     <div class="col-xxl-7">
                         <div class="d-flex justify-content-center mt-5 mt-xxl-0">
                             <div class="profile bg-gradient-primary-to-secondary">
-                                <img class="profile-img" src="" alt="..." />
+                                {{-- <img class="profile-img" src="" alt="..." /> --}}
                                 {{-- @include('partials.guest.svg') --}}
                             </div>
                         </div>
