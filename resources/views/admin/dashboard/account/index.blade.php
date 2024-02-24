@@ -22,7 +22,7 @@
                     {{-- Tittle --}}
                     <h4 class="fw-bold py-3 mb-4">
                         <span class="text-muted fw-light">{{ $tittle }} /</span>
-                        All accounts
+                        {{ $subtittle }}
                     </h4>
 
                     <div>
@@ -84,13 +84,6 @@
                                                     ></i>
                                                 </button>
                                                 <div class="dropdown-menu">
-                                                    <a
-                                                    class="dropdown-item"
-                                                    href="/admin/dashboard/accounts/{{ $account->id }}"
-                                                    >
-                                                    <i class="bi bi-file-earmark-text"></i>
-                                                    Show details</a
-                                                    >
                                                     <a
                                                     class="dropdown-item"
                                                     href="/admin/dashboard/accounts/{{ $account->id }}/edit"

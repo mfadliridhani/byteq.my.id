@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Http\Request;
 use App\Http\Requests\StoreAccountRequest;
+use App\Http\Requests\UpdateAccountRequest;
 
 class AdminUserController extends Controller
 {
@@ -16,6 +17,7 @@ class AdminUserController extends Controller
         //
         return view('admin.dashboard.account.index', [
             'tittle' => 'Account',
+            'subtittle' => 'All Account',
             'accounts' => User::all(),
         ]);
     }
@@ -27,7 +29,8 @@ class AdminUserController extends Controller
     {
         //
         return view('admin.dashboard.account.create', [
-            'tittle' => 'Create new account',
+            'tittle' => 'Account',
+            'subtittle' => 'Add New Account',
             'accounts' => User::all(),
         ]);
     }
@@ -56,24 +59,34 @@ class AdminUserController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(User $user)
+    public function edit(User $account)
     {
         //
+        return view('admin.dashboard.account.edit', [
+            'tittle' => 'Account',
+            'subtittle' => 'Edit Account',
+            'account' => $account,
+        ]);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, User $user)
+    public function update(UpdateAccountRequest $request, User $account)
     {
         //
+        $data = $request->validated();
+        User::where('id', $account->id)->update($data);
+        return redirect('/admin/dashboard/accounts')->with('status', 'Account has been updated!');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(User $user)
+    public function destroy(User $account)
     {
         //
+        User::destroy($account->id);
+        return redirect()->back()->with('status', 'Account has been deleted!');
     }
 }

@@ -29,10 +29,10 @@
                     <div class="card mb-4">
                             <form
                                 method="POST"
-                                action="/admin/dashboard/accounts"
+                                action="/admin/dashboard/accounts/{{ $account->id }}"
                                 enctype="multipart/form-data"
                             >
-                            @method('post')
+                            @method('put')
                             @csrf
                             <h5 class="card-header">
                                 Post image
@@ -113,7 +113,7 @@
                                             type="text"
                                             id="name"
                                             name="name"
-                                            value="{{ old('name') }}"
+                                            value="{{ old('name', $account->name) }}"
                                             autofocus
                                             required
                                         />
@@ -135,7 +135,7 @@
                                             type="text"
                                             id="username"
                                             name="username"
-                                            value="{{ old('username') }}"
+                                            value="{{ old('username', $account->username) }}"
                                             autofocus
                                             required
                                         />
@@ -157,7 +157,7 @@
                                             type="text"
                                             id="email"
                                             name="email"
-                                            value="{{ old('email') }}"
+                                            value="{{ old('email', $account->email) }}"
                                             autofocus
                                             required
                                         />
@@ -178,9 +178,10 @@
                                         id="is_admin"
                                         class="select2 form-select"
                                         name="is_admin"
-                                        required>
-                                        <option value="1">Administrator</option>
-                                        <option value="0">Guest</option>
+                                        required
+                                        >
+                                        <option value="1" {{ old('is_admin', $account->is_admin) == 1 ? 'selected' : '' }}>Administrator</option>
+                                        <option value="0" {{ old('is_admin', $account->is_admin) == 0 ? 'selected' : '' }}>Guest</option>
                                         </select>
                                     </div>
 
@@ -243,7 +244,7 @@
                                         type="submit"
                                         class="btn btn-primary me-2"
                                     >
-                                        Create accounts
+                                        Update accounts
                                     </button>
                                     <button
                                         type="reset"
@@ -275,37 +276,4 @@
     <!-- Overlay -->
     <div class="layout-overlay layout-menu-toggle"></div>
 </div>
-@endsection
-
-@section('script')
-<script>
-    const tittle = document.querySelector('#tittle');
-    const slug = document.querySelector('#slug');
-
-    tittle.addEventListener('change', function() {
-        fetch('/admin/dashboard/accounts/checkSlug?tittle=' + tittle.value)
-        .then(response => response.json())
-        .then(data => {
-            slug.value = data.slug;
-        });
-    });
-
-    document.addEventListener('trix-file-accept', function(e) {
-        e.preventDefault();
-    });
-
-    function previewImage(){
-        const image = document.querySelector('#image');
-        const imgPreview = document.querySelector('#img-preview');
-
-        imgPreview.style.display = 'block';
-
-        const oFReader = new FileReader();
-        oFReader.readAsDataURL(image.files[0]);
-
-        oFReader.onload = function(oFREvent) {
-            imgPreview.src = oFREvent.target.result;
-        }
-    }
-</script>
 @endsection
