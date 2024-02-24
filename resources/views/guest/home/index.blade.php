@@ -28,8 +28,8 @@
                         <div class="d-flex justify-content-center mt-5 mt-xxl-0">
                             <div class="profile bg-gradient-primary-to-secondary">
                                 <!-- use a photo with a transparent background -->
-                                <img class="profile-img" src="" alt="..." />
-                                @include('partials.guest.svg')
+                                {{-- <img class="profile-img" src="" alt="..." /> --}}
+                                {{-- @include('partials.guest.svg') --}}
                             </div>
                         </div>
                     </div>
