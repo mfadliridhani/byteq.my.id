@@ -1,10 +1,10 @@
-<!-- Navigation-->
+<!-- Navigation-->  
 <div class="content-wrapper">
     <div>
         <!-- Basic -->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light mb-5">
+        <nav class="navbar navbar-expand-lg navbar-light mb-5">
             <div class="container-fluid">
-                <a class="navbar-brand" href="/">Byteq</a>
+                <a class="navbar-brand" style="color: #6A6CFF" href="/">Byteq</a>
                 <button
                     class="navbar-toggler"
                     type="button"

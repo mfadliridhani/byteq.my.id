@@ -35,6 +35,6 @@
 
 <div class="text-center">
     <h2 class="display-4 fw-bolder mb-4 mt-4">Let's build something together</h2>
-    <a class="btn btn-outline-light btn-lg px-5 py-3 fs-6 fw-bolder" href="http://project-laravel-1.test/contact">Contact me</a>
+    <a class="btn btn-outline-primary btn-lg px-5 py-3 fs-6 fw-bolder" href="http://project-laravel-1.test/contact">Contact me</a>
 </div>
 @endsection

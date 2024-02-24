@@ -49,6 +49,8 @@
                                     placeholder="John Doe"
                                     aria-label="John Doe"
                                     aria-describedby="name2"
+                                    autofocus
+                                    required
                                 />
                                 @error('name')
                                 <div class="invalid-feedback">
@@ -81,6 +83,8 @@
                                     placeholder="john.doe"
                                     aria-label="john.doe"
                                     aria-describedby="email2"
+                                    required
+                                    
                                 />
                                 @error('email')
                                 <div class="invalid-feedback">
@@ -123,6 +127,7 @@
                                     placeholder="658 799 8941"
                                     aria-label="658 799 8941"
                                     aria-describedby="phone2"
+                                    required
                                 />
                             </div>
                         </div>
@@ -149,6 +154,7 @@
                                     placeholder="Hi, Do you have a moment to talk Joe?"
                                     aria-label="Hi, Do you have a moment to talk Joe?"
                                     aria-describedby="message2"
+                                    required
                                 >{{ old('message') }}</textarea>
                                 @error('message')
                                 <div class="invalid-feedback">

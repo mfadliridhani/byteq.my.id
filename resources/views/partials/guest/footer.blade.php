@@ -1,4 +1,4 @@
-<footer class="footer bg-light mt-5">
+<footer class="footer bg-primary mt-5">
     <div
         class="container-fluid d-flex flex-md-row flex-column justify-content-between align-items-md-center gap-1 container-p-x py-3"
     >
