@@ -27,13 +27,13 @@
 
                     <div>
                         <a href="/admin/dashboard/accounts/create">
-                            <button type="button" class="btn btn-primary mb-3">Add new account</button>
+                            <button type="button" class="btn btn-primary mb-3">Add New Account</button>
                         </a>
                     </div>
                     
                     <!-- Basic Bootstrap Table -->
                     <div class="card">
-                        <h5 class="card-header">Accounts table</h5>
+                        <h5 class="card-header">{{ $subtittle }}</h5>
 
                         @if(session()->has('status'))
                         <div class="alert alert-success alert-dismissible mx-4" role="alert">

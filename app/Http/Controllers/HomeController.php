@@ -16,6 +16,7 @@ class HomeController extends Controller
         //
         return view('admin.dashboard.home.index', [
             'tittle' => 'Home',
+            'subtittle' => 'Your Home',
             'homes' => Home::all()
         ]);
     }

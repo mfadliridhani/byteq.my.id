@@ -18,7 +18,8 @@ class CategoryController extends Controller
         //
         $this->authorize('admin');
         return view('admin.dashboard.categories.index', [
-            'tittle' => 'Categories',
+            'tittle' => 'Blogs',
+            'subtittle' => 'All Categories',
             'categories' => Category::all()
         ]);
     }
@@ -30,7 +31,8 @@ class CategoryController extends Controller
     {
         //
         return view('admin.dashboard.categories.create', [
-            'tittle' => 'Create Category'
+            'tittle' => 'Blogs',
+            'subtittle' => 'Add New Category'
         ]);
     }
 

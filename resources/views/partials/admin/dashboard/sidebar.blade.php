@@ -9,7 +9,7 @@
         <li class="menu-item">
             <a href="/admin/dashboard/homes" class="menu-link {{ Request::is('admin/dashboard/homes*') ? 'active' : '' }}">
                 <i class="menu-icon tf-icons bi bi-crop"></i>
-                <div data-i18n="Analytics">Your home</div>
+                <div data-i18n="Analytics">Your Home</div>
             </a>
         </li>
     </ul>
@@ -38,7 +38,7 @@
         <li class="menu-item">
             <a href="/admin/dashboard/categories" class="menu-link {{ Request::is('admin/dashboard/categories*') ? 'active' : '' }}">
                 <i class="menu-icon tf-icons bi bi-code-slash"></i>
-                <div data-i18n="Analytics">Professional skills</div>
+                <div data-i18n="Analytics">Professional Skills</div>
             </a>
         </li>
         
@@ -60,14 +60,14 @@
         <li class="menu-item">
             <a href="/admin/dashboard/blogs" class="menu-link {{ Request::is('admin/dashboard/blogs*') ? 'active' : '' }}">
                 <i class="menu-icon tf-icons bi bi-tags"></i>
-                <div data-i18n="Analytics">Project name</div>
+                <div data-i18n="Analytics">Project Name</div>
             </a>
         </li>
         
         <li class="menu-item">
             <a href="/admin/dashboard/categories" class="menu-link {{ Request::is('admin/dashboard/categories*') ? 'active' : '' }}">
                 <i class="menu-icon tf-icons bi bi-send-plus"></i>
-                <div data-i18n="Analytics">Let's build</div>
+                <div data-i18n="Analytics">Let's Build</div>
             </a>
         </li>
     </ul>
@@ -96,28 +96,28 @@
 </li>
 
 <li class="menu-header small text-uppercase">
-    <span class="menu-header-text">Contact</span>
+    <span class="menu-header-text">Contacts</span>
 </li>
 <li class="menu-item">
     <ul class="menu-inner py-1">
         <li class="menu-item">
             <a href="/admin/dashboard/contacts" class="menu-link {{ Request::is('admin/dashboard/contacs*') ? 'active' : '' }}">
                 <i class="menu-icon tf-icons bi bi-telephone-inbound"></i>
-                <div data-i18n="Analytics">Get in touch</div>
+                <div data-i18n="Analytics">Get In Touch</div>
             </a>
         </li>
     </ul>
 </li>
 
 <li class="menu-header small text-uppercase">
-    <span class="menu-header-text">Acount</span>
+    <span class="menu-header-text">Accounts</span>
 </li>
 <li class="menu-item">
     <ul class="menu-inner py-1">
         <li class="menu-item">
             <a href="/admin/dashboard/accounts" class="menu-link {{ Request::is('admin/dashboard/acounts*') ? 'active' : '' }}">
                 <i class="menu-icon tf-icons bi bi-person-plus"></i>
-                <div data-i18n="Analytics">My acount</div>
+                <div data-i18n="Analytics">My Account</div>
             </a>
         </li>
     </ul>

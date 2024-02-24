@@ -21,7 +21,7 @@
                     {{-- Tittle --}}
                     <h4 class="fw-bold py-3 mb-4">
                         <span class="text-muted fw-light">{{ $tittle }} /</span>
-                        Post details
+                        {{ $subtittle }}
                     </h4>
                     
                     <!-- Content -->
@@ -31,7 +31,7 @@
                                 @method('delete')
                                 @csrf
                                 <a href="/admin/dashboard/blogs/" class="mr-2">
-                                    <button type="button" class="btn btn-primary mb-3">Back to post</button>
+                                    <button type="button" class="btn btn-primary mb-3">Back To Post</button>
                                 </a>
                                 
                                 <a href="/admin/dashboard/blogs/{{ $blog->slug }}/edit" class="mr-2">
@@ -46,7 +46,7 @@
                             <div class="card-body">
                                 <!-- Photo -->
                                     <h5 class="">
-                                        {{ $blog->tittle }}
+                                        {{ $subtittle }}
                                     </h5>
                                     <div
                                         class="d-flex align-items-start align-items-sm-center gap-4"
@@ -105,7 +105,7 @@
                             <hr class="m-0" />
                             <div class="card-body">
                                 <small class="text-light fw-semibold">
-                                    Category: {{ $blog->category->name }} <br>Published at {{ $blog->published_at }}
+                                    Tittle: {{ $blog->tittle }} <br>Category: {{ $blog->category->name }} <br>Published at {{ $blog->published_at }}
                                     <br>
                                 </small>
                                 <ul class="list-inline mt-2">

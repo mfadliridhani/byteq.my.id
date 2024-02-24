@@ -22,12 +22,12 @@
                     {{-- Tittle --}}
                     <h4 class="fw-bold py-3 mb-4">
                         <span class="text-muted fw-light">{{ $tittle }} /</span>
-                        Contact details
+                        {{ $subtittle }}
                     </h4>
 
                 {{-- Other --}}
                 <div class="card">
-                    <h5 class="card-header">Contacts table</h5>
+                    <h5 class="card-header">{{ $subtittle }}</h5>
 
                     @if(session()->has('status'))
                     <div class="alert alert-success alert-dismissible mx-4" role="alert">

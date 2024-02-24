@@ -22,7 +22,7 @@
                     {{-- Tittle --}}
                     <h4 class="fw-bold py-3 mb-4">
                         <span class="text-muted fw-light">{{ $tittle }} /</span>
-                        Post details
+                        {{ $subtittle }}
                     </h4>
                     
                     <!-- Content -->
@@ -44,6 +44,9 @@
                         
                         
                         <div class="card">
+                            <h5 class="card-header">
+                                {{ $subtittle }}
+                            </h5>
                             <div class="card-body">
                                 <small class="text-light fw-semibold">
                                     Name: {{ $contact->name }} <br> Phone: {{ $contact->phone }} <br>Published at {{ $contact->created_at }}

@@ -23,7 +23,7 @@
                         <span class="text-muted fw-light"
                             >{{ $tittle }} /</span
                         >
-                        Contact details
+                        {{ $subtittle }}
                     </h4>
                     
                     <div class="card mb-4">
@@ -35,7 +35,7 @@
                         @method('put')
                         @csrf
                         <h5 class="card-header">
-                            Contact details
+                            {{ $subtittle }}
                         </h5>
                         <!-- Add new posts -->
                             <div class="card-body">
@@ -135,7 +135,7 @@
                                         type="submit"
                                         class="btn btn-primary me-2"
                                     >
-                                        Update contacts
+                                        Update Contact
                                     </button>
                                     <a href="/admin/dashboard/contacts">
                                         <button

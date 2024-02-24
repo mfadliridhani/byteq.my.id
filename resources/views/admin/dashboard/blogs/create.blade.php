@@ -23,7 +23,7 @@
                         <span class="text-muted fw-light"
                             >{{ $tittle }} /</span
                         >
-                        Add new posts
+                        {{ $subtittle }}
                     </h4>
                     
                     <div class="card mb-4">
@@ -35,7 +35,7 @@
                             @method('post')
                             @csrf
                             <h5 class="card-header">
-                                Post image
+                                {{ $subtittle }}
                             </h5>
                             <!-- Add new posts -->
                             <div class="card-body">
@@ -182,7 +182,7 @@
                                         type="submit"
                                         class="btn btn-primary me-2"
                                     >
-                                        Create posts
+                                        Create Post
                                     </button>
                                     <button
                                         type="reset"

@@ -35,7 +35,7 @@
                             @method('post')
                             @csrf
                             <h5 class="card-header">
-                                Post image
+                                {{ $subtittle }}
                             </h5>
                             <!-- Add new posts -->
                             <div class="card-body">
@@ -243,7 +243,7 @@
                                         type="submit"
                                         class="btn btn-primary me-2"
                                     >
-                                        Create accounts
+                                        Create Account
                                     </button>
                                     <button
                                         type="reset"

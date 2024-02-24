@@ -16,6 +16,7 @@ class DashboardContactContrlloer extends Controller
         //
         return view('admin.dashboard.contact.index', [
             'tittle' => 'Contacts',
+            'subtittle' => 'All Contact',
             'contacts' => Contact::all(),
         ]);
     }
@@ -43,7 +44,8 @@ class DashboardContactContrlloer extends Controller
     {
         //
         return view('admin.dashboard.contact.show', [
-            'tittle' => 'Contact',
+            'tittle' => 'Contacts',
+            'subtittle' => 'Contact Detail',
             'contact' => $contact,
         ]);
     }
@@ -55,7 +57,8 @@ class DashboardContactContrlloer extends Controller
     {
         //
         return view('admin.dashboard.contact.edit', [
-            'tittle' => 'Edit Contact',
+            'tittle' => 'Contacts',
+            'subtittle' => 'Edit Contact',
             'contact' => $contact,
         ]);
     }

@@ -53,7 +53,8 @@ Route::resource('admin/dashboard/accounts', AdminUserController::class)->middlew
 
 Route::get('admin/dashboard', function () {
     $data = [
-        'tittle' => 'Dashboard'
+        'tittle' => 'Dashboard',
+        'subtittle' => 'Your Dashboard'
     ];
     return view('admin/dashboard/index', $data);
 })->middleware('auth');

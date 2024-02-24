@@ -22,14 +22,14 @@
                     {{-- Tittle --}}
                     <h4 class="fw-bold py-3 mb-4">
                         <span class="text-muted fw-light">{{ $tittle }} /</span>
-                        Categories
+                        {{ $subtittle }}
                     </h4>
 
                 {{-- Other --}}
                 <div class="row">
                     <div class="col-md-4 col-lg-4" id="add_">
                         <div class="card mb-4">
-                            <h5 class="card-header">Add new categories</h5>
+                            <h5 class="card-header">Add New Category</h5>
                             <div class="card-body">
                                 <form action="/admin/dashboard/categories/" method="POST">
                                     @method('post')
@@ -91,7 +91,7 @@
 
                     <div class="col-md-4 col-lg-4 d-none" id="edit_">
                         <div class="card mb-4">
-                            <h5 class="card-header">Edit category</h5>
+                            <h5 class="card-header">Edit Category</h5>
                             <div class="card-body">
                                 <form action="/admin/dashboard/categories/" method="POST" id="edit_form">
                                     @method('put')
@@ -153,7 +153,7 @@
                     
                     <div class="col-md-8 col-lg-8">
                         <div class="card">
-                            <h5 class="card-header">Posts table</h5>
+                            <h5 class="card-header">{{ $subtittle }}</h5>
 
                             @if(session()->has('status'))
                             <div class="alert alert-success alert-dismissible mx-4" role="alert">

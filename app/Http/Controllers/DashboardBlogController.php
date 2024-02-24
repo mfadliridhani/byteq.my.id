@@ -19,6 +19,7 @@ class DashboardBlogController extends Controller
         //
         return view('admin.dashboard.blogs.index', [
             'tittle' => 'Blogs',
+            'subtittle' => 'All Posts',
             'blogs' => Blog::where('user_id', auth()->user()->id)->paginate(5),
         ]);
     }
@@ -30,7 +31,8 @@ class DashboardBlogController extends Controller
     {
         //
         return view('admin.dashboard.blogs.create', [
-            'tittle' => 'Create new posts',
+            'tittle' => 'Blogs',
+            'subtittle' => 'Create New Post',
             'categories' => Category::all(),
         ]);
     }
@@ -70,7 +72,8 @@ class DashboardBlogController extends Controller
     {
         //
         return view('admin.dashboard.blogs.show', [
-            'tittle' => 'Blog',
+            'tittle' => 'Blogs',
+            'subtittle' => 'Post Detail',
             'blog' => $blog
         ]);
     }
@@ -82,7 +85,8 @@ class DashboardBlogController extends Controller
     {
         //
         return view('admin.dashboard.blogs.edit', [
-            'tittle' => 'Create new posts',
+            'tittle' => 'Blogs',
+            'subtittle' => 'Edit New Post',
             'blog' => $blog,
             'categories' => Category::all(),
         ]);
