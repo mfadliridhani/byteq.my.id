@@ -8,11 +8,6 @@
     </div>
     @endif
     <div class="text-center mb-5">
-        <div
-            class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 mb-3"
-        >
-            <i class="bi bi-envelope"></i>
-        </div>
         <h1 class="fw-bolder">Get in touch</h1>
         <p class="lead fw-normal text-muted mb-0">
             Let's work together!
@@ -27,117 +22,150 @@
             />
             @method('post')
             @csrf
-                <!-- Name input-->
-                <div class="form-floating mb-3">
-                    <input
-                        class="form-control @error('name') is-invalid @enderror"
-                        id="name"
-                        name="name"
-                        value="{{ old('name') }}"
-                        type="text"
-                        placeholder="Enter your name..."
-                        data-sb-validations="required"
-                    />
-                    @error('name')
-                    <div class="invalid-feedback">
-                        {{ $message }}
-                    </div>
-                    @enderror
-                    <label for="name">Full name</label>
-                    <div
-                        class="invalid-feedback"
-                        data-sb-feedback="name:required"
-                    >
-                        A name is required.
-                    </div>
-                </div>
-                <!-- Email address input-->
-                <div class="form-floating mb-3">
-                    <input
-                        class="form-control @error('email') is-invalid @enderror"
-                        id="email"
-                        name="email"
-                        value="{{ old('email') }}"
-                        type="email"
-                        placeholder="name@example.com"
-                        data-sb-validations="required,email"
-                    />
-                    @error('email')
-                    <div class="invalid-feedback">
-                        {{ $message }}
-                    </div>
-                    @enderror
-                    <label for="email">Email address</label>
-                    <div
-                        class="invalid-feedback"
-                        data-sb-feedback="email:required"
-                    >
-                        An email is required.
-                    </div>
-                    <div
-                        class="invalid-feedback"
-                        data-sb-feedback="email:email"
-                    >
-                        Email is not valid.
-                    </div>
-                </div>
-                <!-- Phone number input-->
-                <div class="form-floating mb-3">
-                    <input
-                        class="form-control @error('phone') is-invalid @enderror"
-                        id="phone"
-                        name="phone"
-                        value="{{ old('phone') }}"
-                        type="tel"
-                        placeholder="(123) 456-7890"
-                        data-sb-validations="required"
-                    />
-                    @error('phone')
-                    <div class="invalid-feedback">
-                        {{ $message }}
-                    </div>
-                    @enderror
-                    <label for="phone">Phone number</label>
-                    <div
-                        class="invalid-feedback"
-                        data-sb-feedback="phone:required"
-                    >
-                        A phone number is required.
-                    </div>
-                </div>
-                <!-- Message input-->
-                <div class="form-floating mb-3">
-                    <textarea
-                        class="form-control @error('message') is-invalid @enderror"
-                        id="message"
-                        name="message"
-                        type="text"
-                        placeholder="Enter your message here..."
-                        style="height: 10rem"
-                        data-sb-validations="required"
-                    />{{ old('message') }}</textarea>
-                    @error('message')
-                    <div class="invalid-feedback">
-                        {{ $message }}
-                    </div>
-                    @enderror
-                    <label for="message">Message</label>
-                    <div
-                        class="invalid-feedback"
-                        data-sb-feedback="message:required"
-                    >
-                        A message is required.
-                    </div>
-                </div>
-                
-                <!-- Submit Button-->
-                <div class="d-grid">
-                    <button
-                        type="submit"
-                        class="btn btn-primary btn-lg"
-                    >
-                        Submit
-                    </button>
+                <div class="card-body">
+                    <form>
+                        <div class="mb-3">
+                            <label
+                                class="form-label"
+                                for="name"
+                                >Full Name</label
+                            >
+                            <div
+                                class="input-group input-group-merge"
+                            >
+                                <span
+                                    id="name"
+                                    class="input-group-text"
+                                    ><i
+                                        class="bx bx-user"
+                                    ></i
+                                ></span>
+                                <input
+                                    type="text"
+                                    class="form-control @error('name') is-invalid @enderror"
+                                    id="name"
+                                    name="name"
+                                    value="{{ old('name') }}"
+                                    placeholder="John Doe"
+                                    aria-label="John Doe"
+                                    aria-describedby="name2"
+                                />
+                                @error('name')
+                                <div class="invalid-feedback">
+                                    {{ $message }}
+                                </div>
+                                @enderror
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label
+                                class="form-label"
+                                for="email"
+                                >Email</label
+                            >
+                            <div
+                                class="input-group input-group-merge"
+                            >
+                                <span
+                                    class="input-group-text"
+                                    ><i
+                                        class="bx bx-envelope"
+                                    ></i
+                                ></span>
+                                <input
+                                    type="text"
+                                    id="email"
+                                    name="email"
+                                    value="{{ old('email') }}"
+                                    class="form-control @error('email') is-invalid @enderror"
+                                    placeholder="john.doe"
+                                    aria-label="john.doe"
+                                    aria-describedby="email2"
+                                />
+                                @error('email')
+                                <div class="invalid-feedback">
+                                    {{ $message }}
+                                </div>
+                                @enderror
+                                <span
+                                    id="email2"
+                                    class="input-group-text"
+                                    >@example.com</span
+                                >
+                            </div>
+                            <div class="form-text">
+                                You can use letters,
+                                numbers & periods
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label
+                                class="form-label"
+                                for="phone"
+                                >Phone</label
+                            >
+                            <div
+                                class="input-group input-group-merge"
+                            >
+                                <span
+                                    id="phone2"
+                                    class="input-group-text"
+                                    ><i
+                                        class="bx bx-phone"
+                                    ></i
+                                ></span>
+                                <input
+                                    type="text"
+                                    id="phone"
+                                    name="phone"
+                                    value="{{ old('phone') }}"
+                                    class="form-control phone-mask @error('phone') is-invalid @enderror"
+                                    placeholder="658 799 8941"
+                                    aria-label="658 799 8941"
+                                    aria-describedby="phone2"
+                                />
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label
+                                class="form-label"
+                                for="message"
+                                >Message</label
+                            >
+                            <div
+                                class="input-group input-group-merge"
+                            >
+                                <span
+                                    id="message2"
+                                    class="input-group-text"
+                                    ><i
+                                        class="bx bx-comment"
+                                    ></i
+                                ></span>
+                                <textarea
+                                    id="message"
+                                    name="message"
+                                    class="form-control @error('message') is-invalid @enderror"
+                                    placeholder="Hi, Do you have a moment to talk Joe?"
+                                    aria-label="Hi, Do you have a moment to talk Joe?"
+                                    aria-describedby="message2"
+                                >{{ old('message') }}</textarea>
+                                @error('message')
+                                <div class="invalid-feedback">
+                                    {{ $message }}
+                                </div>
+                                @enderror
+                            </div>
+                        </div>
+                        <div class="d-grid mt-4">
+                            <button
+                            type="submit"
+                            class="btn btn-primary"
+                            >
+                                Send
+                            </button>
+                        </div>
+                    </form>
                 </div>
             </form>
         </div>
