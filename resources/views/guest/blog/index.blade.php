@@ -39,7 +39,7 @@
                             {{-- Post image --}}
                             <div class="col text-center text-lg-start mb-4 mb-lg-0">
                                 <div class="bg-light p-4 rounded-4">
-                                    <img width="185px" src="{{ asset('storage'. $blog->image) }}" alt="">
+                                    <img width="185px" src="{{ asset('storage/'. $blog->image) }}" alt="">
                                 </div>
                             </div>
         
