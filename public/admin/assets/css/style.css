@@ -3,7 +3,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: 1.5rem;
-    min-height: 100vh;
+    min-height: 75vh;
     align-items: center;
 }
 
