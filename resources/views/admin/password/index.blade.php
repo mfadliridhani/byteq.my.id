@@ -30,6 +30,7 @@
                     />
                   </div>
                   <a href="/admin/login">
+                    
                     <button class="btn btn-primary d-grid w-100">Send Reset Link</button>
                   </a>
             {{-- </Form> --}}
