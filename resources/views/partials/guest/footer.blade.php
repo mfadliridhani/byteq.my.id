@@ -1,16 +1,16 @@
 <footer class="footer bg-primary mt-5">
     <div
-        class="container-fluid d-flex flex-md-row flex-column justify-content-between align-items-md-center gap-1 container-p-x py-3"
+        class="container-fluid d-flex flex-md-row flex-column justify-content-center align-items-md-center gap-1 container-p-x py-3"
     >
-        <div>
+        <div class="align-items-center" style="text-align: center;">
             <a
                 href="https://themeselection.com/demo/sneat-bootstrap-html-admin-template/landing/"
                 target="_blank"
                 class="footer-text fw-bolder"
                 >Copyright</a
             >
-            © M Fadli Ridhani 2023
-        </div>
+            © M Fadli Ridhani 2023 <br> powered by <a href="https://laravel.com/" target="_blank" class="footer-text fw-bolder">Laravel</a>
+        </div>    
         {{-- <div>
             <a
                 href="https://themeselection.com/license/"

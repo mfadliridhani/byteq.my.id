@@ -11,12 +11,9 @@
         <div class="row gx-5 justify-content-center">
             <div class="col-lg-11 col-xl-9 col-xxl-8">
                 
-                <div class="d-flex align-items-center justify-content-between mb-4">
-                    <h2 class="text-primary fw-bolder mb-0">Find a post</h2>
-                    <!-- Download resume button-->
-                    <!-- Note: Set the link href target to a PDF file within your project-->
-                    <form action="blogs">
-        
+                <form action="blogs">
+                    <div class="d-grid align-items-center justify-content-center mb-5">
+
                         @if(request('category'))
                         <input type="hidden" name="category" value="{{ request('category') }}">                        
                         @endif
@@ -29,8 +26,8 @@
                             <input type="text" class="form-control" placeholder="Type in here" name="search" value="{{ request('search') }}">
                             <button class="btn btn-primary" type="submit">Search</button>
                         </div>
-                    </form>
-                </div>
+                    </div>
+                </form>
         
                 @if ($blogs->count())
                 {{-- Foreach loop to display all posts --}}

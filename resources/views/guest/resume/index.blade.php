@@ -13,17 +13,9 @@
                     <!-- Experience Section-->
                     <section>
                         <div class="d-flex align-items-center justify-content-between mb-4">
-                            <h2 class="text-primary fw-bolder mb-0">Experience</h2>
+                            <h2 class="text-secondary fw-bolder mb-0">Experience</h2>
                             <!-- Download resume button-->
                             <!-- Note: Set the link href target to a PDF file within your project-->
-                            <a
-                                class="btn btn-primary px-4 py-3 mx-auto"
-                                style="width: 200px"
-                                href="#!"
-                            >
-                                <div class="d-inline-block bi bi-download me-2"></div>
-                                Download Resume
-                            </a>
                         </div>
                         <!-- Experience Card 1-->
                         <div class="card shadow border-0 rounded-4 mb-5">
@@ -244,7 +236,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="card shadow border-0 rounded-4 mb-5">
+                        <div class="card shadow border-0 rounded-4">
                             <div class="card-body p-5">
                                 <!-- Languages list-->
                                 <div class="mb-0">
