@@ -45,7 +45,7 @@
                                     <input type="hidden" name="oldImage" value="{{ $blog->image }}">
                                     @if($blog->image)
                                     <img
-                                        src="{{ asset($blog->image) }}"
+                                        src="{{ asset('storage/'. $blog->image) }}"
                                         alt="user-avatar"
                                         class="d-block rounded"
                                         height="100"
