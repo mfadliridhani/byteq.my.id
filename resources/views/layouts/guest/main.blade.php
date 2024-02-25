@@ -73,6 +73,11 @@
             href="{{ asset('../admin/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css') }}"
         />
 
+        <link
+        rel="stylesheet"
+        href="{{ asset('../admin/assets/css/style.css') }}"
+        />
+
         <!-- Page CSS -->
         <!-- Page -->
         <link
@@ -139,6 +144,9 @@
             src="{{ asset('https://buttons.github.io/buttons.js') }}"
         >
         </script>
+        <!-- particle.js links -->
+        <script src="{{ asset('../admin/assets/js/particles.min.js') }}"></script>
+        <script src="{{ asset('../admin/assets/js/app.js') }}"></script>
         @yield('script')
     </body>
 </html>

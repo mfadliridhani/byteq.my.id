@@ -2,7 +2,8 @@
 
 @section('content')
     @foreach ($homes as $home)
-        <section class="py-5">
+        <section class="home py-5">
+            <div id="particles-js" style="pointer-events: none;"></div>
             <div class="container px-5 pb-5">
                 <div class="row gx-5 align-items-center">
                     <div class="col-xxl-5">
@@ -23,7 +24,6 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </section>

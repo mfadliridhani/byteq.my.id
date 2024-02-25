@@ -1,13 +1,16 @@
-<!-- Footer -->
-<footer class="content-footer footer bg-footer-theme">
+<footer class="footer bg-primary mt-5">
     <div
-        class="container-xxl d-flex flex-wrap justify-content-between py-2 flex-md-row flex-column"
+        class="container-fluid d-flex flex-md-row flex-column justify-content-center align-items-md-center gap-1 container-p-x py-3"
     >
-        <div class="mb-2 mb-md-0">
-            <div class="small m-0">
-                Copyright © M Fadli Ridhani <script> document.write(new Date().getFullYear());</script>
-            </div>
-        </div>
+        <div class="align-items-center" style="text-align: center;">
+            <a
+                href="https://themeselection.com/demo/sneat-bootstrap-html-admin-template/landing/"
+                target="_blank"
+                class="footer-text fw-bolder"
+                >Copyright</a
+            >
+            © M Fadli Ridhani 2023 <br> powered by <a href="https://laravel.com/" target="_blank" class="footer-text fw-bolder">Laravel</a>
+        </div>    
         {{-- <div>
             <a
                 href="https://themeselection.com/license/"
@@ -15,7 +18,36 @@
                 target="_blank"
                 >License</a
             >
+            <a
+                href="javascript:void(0)"
+                class="footer-link me-4"
+                >Help</a
+            >
+            <a
+                href="javascript:void(0)"
+                class="footer-link me-4"
+                >Contact</a
+            >
+            <a
+                href="javascript:void(0)"
+                class="footer-link"
+                >Terms &amp; Conditions</a
+            >
         </div> --}}
     </div>
 </footer>
-<!-- / Footer -->
+
+{{-- <footer class="bg-white py-4 mt-auto">
+    <div class="container px-5">
+        <div class="row align-items-center justify-content-between flex-column flex-sm-row">
+            <div class="col-auto"><div class="small m-0">Copyright &copy; M Fadli Ridhani 2023</div></div>
+            <div class="col-auto">
+                <a class="small" href="#!">Privacy</a>
+                <span class="mx-1">&middot;</span>
+                <a class="small" href="#!">Terms</a>
+                <span class="mx-1">&middot;</span>
+                <a class="small" href="#!">Contact</a>
+            </div>
+        </div>
+    </div>
+</footer> --}}
