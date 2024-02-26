@@ -31,7 +31,7 @@
                   </div>
                   <a href="/admin/login">
                     
-                    <button class="btn btn-primary d-grid w-100 mt-4">Send Reset Link</button>
+                    <button class="btn btn-primary d-grid w-100 mt-4">Reset password</button>
                   </a>
             {{-- </Form> --}}
 

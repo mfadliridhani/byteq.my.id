@@ -67,9 +67,6 @@
             href="{{ asset('../admin/assets/css/demo.css') }}"
         />
 
-        <!-- Core theme CSS (includes Bootstrap)-->
-        {{-- <link href={{ asset('guest/css/styles.css') }} rel="stylesheet" /> --}}
-
         <!-- Vendors CSS -->
         <link
             rel="stylesheet"
