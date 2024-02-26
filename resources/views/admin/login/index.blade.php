@@ -4,32 +4,23 @@
 <div class="container-xxl">
     <div class="authentication-wrapper authentication-basic container-p-y">
       <div class="authentication-inner">
-        <!-- Register -->
         <div class="card">
           <div class="card-body">
-
             @if(session()->has('status'))
               <div class="alert alert-success alert-dismissible fade show" role="alert">
                 {{ session('status') }}
               <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
               </div>
             @endif
-
             @if(session()->has('loginError'))
               <div class="alert alert-danger alert-dismissible fade show" role="alert">
                 {{ session('loginError') }}
               <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
               </div>
             @endif
-            
-            <!-- Logo -->
             @include('partials.admin.login.logo')
-            <!-- /Logo -->
             <h4 class="mb-2">Welcome to byteq! 👋</h4>
             <p class="mb-4">Please sign-in to your account and start the adventure</p>
-
-
-            {{-- <Form> --}}
                 <form id="username" class="mb-3" action="/admin/login" method="POST">
                 @csrf
                     <div class="mb-3">
@@ -44,7 +35,6 @@
                         required
                         value="{{ old('username') }}"
                       />
-
                       @error('username')
                       <div class="invalid-feedback">
                           {{ $message }}
@@ -81,18 +71,14 @@
                       <button class="btn btn-primary d-grid w-100" type="submit">Sign in</button>
                     </div>
                   </form>
-            {{-- </Form> --}}
-
             <p class="text-center">
               <span>New on our platform?</span>
               <a href="/admin/register">
                 <span>Create an account</span>
               </a>
             </p>
-
           </div>
         </div>
-        <!-- /Register -->
       </div>
     </div>
   </div>
