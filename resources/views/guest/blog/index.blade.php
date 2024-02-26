@@ -52,12 +52,29 @@
                 @else
                 <p class="text-center fs-4">No post found</p>
                 @endif
-                <div class="d-flex justify-content-end">
-                    <nav aria-label="Page navigation example">
-                        <ul class="pagination">
-                            {{ $blogs->links() }}
-                        </ul>
-                    </nav>
+                <div class="d-flex justify-content-center">
+                    <ul class="pagination">
+                        <li class="page-item prev">
+                            <a class="page-link" href="{{ $blogs->previousPageUrl() }}"
+                                @if (!$blogs->onFirstPage()) 
+                                    aria-label="Previous"
+                                @endif
+                            ><i class="tf-icon bx bx-chevrons-left"></i></a>
+                        </li>
+                    
+                        @foreach ($blogs->getUrlRange(1, $blogs->lastPage()) as $page => $url)
+                            <li class="page-item {{ $page == $blogs->currentPage() ? 'active' : '' }}">
+                                <a class="page-link" href="{{ $url }}">{{ $page }}</a>
+                            </li>
+                        @endforeach
+                        <li class="page-item next">
+                            <a class="page-link" href="{{ $blogs->nextPageUrl() }}"
+                                @if ($blogs->hasMorePages()) 
+                                    aria-label="Next"
+                                @endif
+                            ><i class="tf-icon bx bx-chevrons-right"></i></a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
