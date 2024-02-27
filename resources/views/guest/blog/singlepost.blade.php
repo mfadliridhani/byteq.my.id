@@ -17,12 +17,12 @@
                                             {{ $blog->tittle }}
                                         </div>
                                         <div class="small fw-bolder">
-                                            Post by. <a href="/blogs?user={{ $blog->user->username }}">{{ $blog->user->name }}</a> in <a href="/blogs?category={{ $blog->category->slug }}">{{ $blog->category->name }}</a> on <div class="small text-muted">{{ $blog->created_at->format('d F, Y') }}</div>
+                                            Post by. <a href="/blogs?user={{ $blog->user->username }}">{{ $blog->user->name }}</a> in <a href="/blogs?category={{ $blog->category->slug }}">{{ $blog->category->name }}</a> on <div class="small text-muted mb-2">{{ $blog->created_at->format('d F, Y') }}</div>
                                         </div>
-                                        <div class="small text-muted">
+                                        <div class="small text-muted mb-2">
                                             {!! $blog->body !!}
                                         </div>
-                                        <a href="/blogs">Back to all post</a>
+                                        <a class="small" style="color: #6A6CFF" href="/blogs"><i class="bi bi-box-arrow-in-left"></i> Back to all post</a>
                                 </div>
                             </div>
                         </div>
