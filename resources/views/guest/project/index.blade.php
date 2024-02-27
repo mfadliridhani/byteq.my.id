@@ -7,7 +7,7 @@
     </div>
     <div class="container px-2">
         <div class="row gx-5 justify-content-center">
-            <div class="col-xxl-5">
+            <div class="col-lg-11 col-xl-9 col-xxl-8">
                 <div class="card overflow-hidden shadow rounded-4 border-0 mb-5">
                     <div class="card-body p-0">
                         <div class="d-flex align-items-center">
@@ -35,7 +35,7 @@
     </div>
     <div class="text-center">
         <h2 class="display-4 fw-bolder mb-4 mt-4">Let's build something together</h2>
-        <a class="btn btn-outline-primary btn-lg px-5 py-3 fs-6 fw-bolder" href="http://project-laravel-1.test/contact">Contact me</a>
+        <a class="btn btn-outline-primary btn-lg px-5 py-3 fs-6 fw-bolder" href="/contacts">Contact me</a>
     </div>
 </section>
 @endsection
