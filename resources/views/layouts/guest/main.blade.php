@@ -103,10 +103,11 @@
         ></script>
 
         <style>
-          trix-toolbar [data-trix-button-group="file-tools"] {
-            display: none;
-          }
+            trix-toolbar [data-trix-button-group="file-tools"] {
+                display: none;
+            }
         </style>
+        
     </head>
 
     <body>
@@ -147,6 +148,5 @@
         <!-- particle.js links -->
         <script src="{{ asset('../admin/assets/js/particles.min.js') }}"></script>
         <script src="{{ asset('../admin/assets/js/app.js') }}"></script>
-        @yield('script')
     </body>
 </html>

@@ -7,7 +7,7 @@
     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
     @endif
-    <div class="text-center mb-5">
+    <div class="text-center mb-4">
         <h1 class="fw-bolder">Get in touch</h1>
         <p class="lead fw-normal text-muted mb-0">
             Let's work together!
