@@ -46,8 +46,8 @@
                                     id="name"
                                     name="name"
                                     value="{{ old('name') }}"
-                                    placeholder="John Doe"
-                                    aria-label="John Doe"
+                                    placeholder="Fadli Dev"
+                                    aria-label="Fadli Dev"
                                     aria-describedby="name2"
                                     autofocus
                                     required
@@ -80,8 +80,8 @@
                                     name="email"
                                     value="{{ old('email') }}"
                                     class="form-control @error('email') is-invalid @enderror"
-                                    placeholder="john.doe"
-                                    aria-label="john.doe"
+                                    placeholder="fadli.dev"
+                                    aria-label="fadli.dev"
                                     aria-describedby="email2"
                                     required
                                     
@@ -94,7 +94,7 @@
                                 <span
                                     id="email2"
                                     class="input-group-text"
-                                    >@example.com</span
+                                    >@byteq.my.id</span
                                 >
                             </div>
                             <div class="form-text">
@@ -124,8 +124,8 @@
                                     name="phone"
                                     value="{{ old('phone') }}"
                                     class="form-control phone-mask @error('phone') is-invalid @enderror"
-                                    placeholder="658 799 8941"
-                                    aria-label="658 799 8941"
+                                    placeholder="+62 878 1515 5215"
+                                    aria-label="+62 878 1515 5215"
                                     aria-describedby="phone2"
                                     required
                                 />
@@ -151,8 +151,8 @@
                                     id="message"
                                     name="message"
                                     class="form-control @error('message') is-invalid @enderror"
-                                    placeholder="Hi, Do you have a moment to talk Joe?"
-                                    aria-label="Hi, Do you have a moment to talk Joe?"
+                                    placeholder="Hi, Do you have time to talk with me?"
+                                    aria-label="Hi, Do you have time to talk with me?"
                                     aria-describedby="message2"
                                     required
                                 >{{ old('message') }}</textarea>
