@@ -10,7 +10,7 @@ class="section-py bg-body landing-reviews pb-1"
 <div class="container">
     <div class="row align-items-center gx-0 gy-4 g-lg-5">
         <div class="col-md-6 col-lg-5 col-xl-3">
-            <div class="mb-3 pb-5">
+            <div class="mb-3 pb-1">
                 <span class="badge bg-label-primary"
                     >Real Customers Reviews</span
                 >
