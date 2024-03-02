@@ -1,53 +1,193 @@
 @extends('layouts.guest.main')
 
 @section('content')
-    @foreach ($homes as $home)
-        <section class="home py-5">
-            <div id="particles-js" style="pointer-events: none;"></div>
-            <div class="container px-5 pb-5">
-                <div class="row gx-5 align-items-center">
-                    <div class="col-xxl-5">
-                        <div class="text-center text-xxl-start">
-                            <div class="fs-3 fw-light text-muted">{{ $home->description_i_can_help }}</div>
-                            <h1 class="display-3 fw-bolder mb-5"><span class="text-gradient d-inline">{{ $home->description_get_online_and }}</span></h1>
-                            <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xxl-start mb-3">
-                                <a class="btn btn-particle-js btn-primary btn-lg px-5 py-3 me-sm-3 fs-6 fw-bolder" href="{{ $home->resume }}">Resume</a>
-                                <a class="btn btn btn-particle-js btn-outline-primary btn-lg px-5 py-3 fs-6 fw-bolder" href="{{ $home->projects }}">Projects</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xxl-7">
-                        <div class="d-flex justify-content-center mt-5 mt-xxl-0">
-                            <div class="profile bg-gradient-primary-to-secondary">
-                                {{-- <img class="profile-img" src="" alt="..." /> --}}
-                                {{-- @include('partials.guest.svg') --}}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="bg-light py-5">
-            <div class="container px-4">
-                <div class="row gx-5 justify-content-center">
-                    <div class="col-xxl-8">
-                        <div class="text-center my-5">
-                            <h2 class="display-5 fw-bolder">
-                                <span class="text-gradient d-inline">About Me</span>
-                            </h2>
-                            <p class="lead fw-light mb-4">Hallo! my name is <b>{{ $home->name }}</b></p>
-                            <p class="text-muted">
-                                {!! $home->description_about_me !!}
-                            </p>
-                            <div class="d-flex justify-content-center fs-2 gap-4">
-                                <a class="text-gradient" href="{{ $home->twitter }}"><i class="bi bi-instagram"></i></a>
-                                <a class="text-gradient" href="{{ $home->linkedin }}"><i class="bi bi-linkedin"></i></a>
-                                <a class="text-gradient" href="{{ $home->github }}"><i class="bi bi-github"></i></a>
-                            </div>
-                        </div>
+@foreach($homes as $home)
+<div data-bs-spy="scroll" class="scrollspy-example">
+    <!-- Hero: Start -->
+    <section id="hero-animation">
+        <div
+            id="landingHero"
+            class="section-py landing-hero position-relative"
+        >
+            <img
+                src="{{ asset('../admin/assets/img/front-pages/backgrounds/hero-bg.png') }}"
+                alt="hero background"
+                class="position-absolute top-0 start-50 translate-middle-x object-fit-contain w-100 h-100"
+                data-speed="1"
+            />
+            <div class="container">
+                <div class="hero-text-box text-center">
+                    <h1
+                        class="text-primary hero-title display-4 fw-bold"
+                    >
+                        {{ $home->description_i_can_help }}
+                    </h1>
+                    <h2 class="hero-sub-title h6 mb-4 pb-1">
+                        {{ $home->description_get_online_and }}
+                    </h2>
+                    <div
+                        class="landing-hero-btn d-inline-block position-relative"
+                    >
+                        <span
+                            class="hero-btn-item position-absolute d-none d-md-flex text-heading"
+                            >Join community
+                            <img
+                                src="{{ asset('../admin/assets/img/front-pages/icons/Join-community-arrow.png') }}"
+                                alt="Join community arrow"
+                                class="scaleX-n1-rtl"
+                        /></span>
+                        <a
+                            href="/contacts"
+                            class="btn btn-primary"
+                            >Contact us</a
+                        >
                     </div>
                 </div>
+                <div
+                    id="heroDashboardAnimation"
+                    class="hero-animation-img"
+                >
+                    <a
+                        href="../vertical-menu-template/app-ecommerce-dashboard.html"
+                        target="_blank"
+                    >
+                        <div
+                            id="heroAnimationImg"
+                            class="position-relative hero-dashboard-img"
+                        >
+                            <img
+                                src="{{ asset('../admin/assets/img/front-pages/landing-page/hero-dashboard-light.png') }}"
+                                alt="hero dashboard"
+                                class="animation-img"
+                                data-app-light-img="front-pages/landing-page/hero-dashboard-light.png"
+                                data-app-dark-img="front-pages/landing-page/hero-dashboard-dark.png"
+                            />
+                            <img
+                                src="{{ asset('../admin/assets/img/front-pages/landing-page/hero-elements-light.png') }}"
+                                alt="hero elements"
+                                class="position-absolute hero-elements-img animation-img top-0 start-0"
+                                data-app-light-img="front-pages/landing-page/hero-elements-light.png"
+                                data-app-dark-img="front-pages/landing-page/hero-elements-dark.png"
+                            />
+                        </div>
+                    </a>
+                </div>
             </div>
-        </section>
-    @endforeach
+        </div>
+        <div class="landing-hero-blank"></div>
+    </section>
+    <!-- Hero: End -->
+
+    <!-- Useful features: Start -->
+    {{-- <section id="landingFeatures" class="section-py landing-features">
+        <div class="container">
+            <div class="text-center mb-3 pb-1">
+                <span class="badge bg-label-primary"
+                    >Useful Features</span
+                >
+            </div>
+            <h3 class="text-center mb-1">
+                Everything you need to start your next project
+            </h3>
+            <p class="text-center mb-3 mb-md-5 pb-3">
+                Not just a set of tools, the package includes
+                ready-to-deploy conceptual application.
+            </p>
+            <div class="features-icon-wrapper row gx-0 gy-4 g-sm-5">
+                <div
+                    class="col-lg-4 col-sm-6 text-center features-icon-box"
+                >
+                    <div class="text-center mb-3">
+                        <img
+                            src="{{ asset('../admin/assets/img/front-pages/icons/laptop.png') }}"
+                            alt="laptop charging"
+                        />
+                    </div>
+                    <h5 class="mb-3">Quality Code</h5>
+                    <p class="features-icon-description">
+                        Code structure that all developers will easily
+                        understand and fall in love with.
+                    </p>
+                </div>
+                <div
+                    class="col-lg-4 col-sm-6 text-center features-icon-box"
+                >
+                    <div class="text-center mb-3">
+                        <img
+                            src="{{ asset('../admin/assets/img/front-pages/icons/rocket.png') }}"
+                            alt="transition up"
+                        />
+                    </div>
+                    <h5 class="mb-3">Continuous Updates</h5>
+                    <p class="features-icon-description">
+                        Free updates for the next 12 months, including
+                        new demos and features.
+                    </p>
+                </div>
+                <div
+                    class="col-lg-4 col-sm-6 text-center features-icon-box"
+                >
+                    <div class="text-center mb-3">
+                        <img
+                            src="{{ asset('../admin/assets/img/front-pages/icons/paper.png') }}"
+                            alt="edit"
+                        />
+                    </div>
+                    <h5 class="mb-3">Stater-Kit</h5>
+                    <p class="features-icon-description">
+                        Start your project quickly without having to
+                        remove unnecessary features.
+                    </p>
+                </div>
+                <div
+                    class="col-lg-4 col-sm-6 text-center features-icon-box"
+                >
+                    <div class="text-center mb-3">
+                        <img
+                            src="{{ asset('../admin/assets/img/front-pages/icons/check.png') }}"
+                            alt="3d select solid"
+                        />
+                    </div>
+                    <h5 class="mb-3">API Ready</h5>
+                    <p class="features-icon-description">
+                        Just change the endpoint and see your own data
+                        loaded within seconds.
+                    </p>
+                </div>
+                <div
+                    class="col-lg-4 col-sm-6 text-center features-icon-box"
+                >
+                    <div class="text-center mb-3">
+                        <img
+                            src="{{ asset('../admin/assets/img/front-pages/icons/user.png') }}"
+                            alt="lifebelt"
+                        />
+                    </div>
+                    <h5 class="mb-3">Excellent Support</h5>
+                    <p class="features-icon-description">
+                        An easy-to-follow doc with lots of references
+                        and code examples.
+                    </p>
+                </div>
+                <div
+                    class="col-lg-4 col-sm-6 text-center features-icon-box"
+                >
+                    <div class="text-center mb-3">
+                        <img
+                            src="{{ asset('../admin/assets/img/front-pages/icons/keyboard.png') }}"
+                            alt="google docs"
+                        />
+                    </div>
+                    <h5 class="mb-3">Well Documented</h5>
+                    <p class="features-icon-description">
+                        An easy-to-follow doc with lots of references
+                        and code examples.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section> --}}
+    <!-- Useful features: End -->
+</div>
+@endforeach
 @endsection

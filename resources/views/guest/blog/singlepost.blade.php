@@ -1,34 +1,70 @@
 @extends('layouts.guest.main')
 
 @section('content')
-    <section class="py-5">
-        <div class="px-2">
-            <div class="text-center mb-5">
-                <h1 class="display-5 fw-bolder mb-0"><span class="text-gradient d-inline">{{ $tittle }}</span></h1>
-            </div>
-            <div class="row gx-5 justify-content-center">
-                <div class="col-lg-11 col-xl-9 col-xxl-8">
-                    <div class="card shadow border-0 rounded-4 mb-5">
-                        <div class="card-body p-5">
-                            <div class="row align-items-center gx-5">
-                                <img class="card-img-top" width="185px" src="{{ asset('storage/'. $blog->image) }}" alt="">
-                                <div class="col-lg-8">
-                                        <div class="text-primary fw-bolder mb-2">
+<section
+id="landingContact"
+class="section-py bg-body landing-contact"
+>
+    <div class="container">
+        <div class="text-center mt-5 mb-3 pb-1">
+            <span class="badge bg-label-primary">Contact US</span>
+        </div>
+        <h3 class="text-center mb-1">Let's work together</h3>
+        <p class="text-center mb-4 mb-lg-5 pb-md-3">
+            {{ $tittle }}
+        </p>
+        <div class="row gy-4">
+            <div class="content-wrapper">
+                <!-- Content -->
+                <div class="container-xxl flex-grow-1 container-p-y">
+                    <!-- Examples -->
+                    <div class="row mb-5">
+                        <div class="col-md-6 col-lg-4 mb-3">
+                            <div class="card h-100">
+                                <a href="/blog/{{ $blog->slug }}">
+                                    <img
+                                        class="card-img-top"
+                                        src="{{ asset('storage/'. $blog->image) }}"
+                                        alt="Card image cap"
+                                    />
+                                </a>
+                                <div class="card-body">
+                                    <h5 class="card-title">
+                                        <a href="/blog/{{ $blog->slug }}">
                                             {{ $blog->tittle }}
-                                        </div>
-                                        <div class="small fw-bolder">
-                                            Post by. <a href="/blogs?user={{ $blog->user->username }}">{{ $blog->user->name }}</a> in <a href="/blogs?category={{ $blog->category->slug }}">{{ $blog->category->name }}</a> on <div class="small text-muted mb-2">{{ $blog->created_at->format('d F, Y | H:i:s') }}</div>
-                                        </div>
-                                        <div class="small text-muted mb-2">
-                                            {!! $blog->body !!}
-                                        </div>
-                                        <a class="small" style="color: #6A6CFF" href="/blogs"><i class="bi bi-box-arrow-in-left"></i> Back to all post</a>
+                                        </a>
+                                    </h5>
+                                    <p class="card-text">
+                                        <small class="text-muted">
+                                            Post by.
+                                            <a class="text-decoration-none" href="/blogs?user={{ $blog->user->username }}"
+                                                >{{ $blog->user->name }}</a
+                                            >
+                                            in
+                                            <a
+                                                class="text-decoration-none"
+                                                href="/blogs?category={{ $blog->category->slug }}"
+                                                >{{ $blog->category->name }}</a
+                                            >
+                                            on
+                                            <div class="text-decoration-none">
+                                                {{ $blog->created_at->format('d F, Y | H:i:s') }}
+                                            </div>
+                                        </small>
+                                    </p>
+                                    <p class="card-text">
+                                        {!! $blog->body !!}
+                                    </p>
+                                    <a href="/blogs" class="btn btn-outline-primary">Back to post</a>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <!-- Examples -->
                 </div>
+                <!-- / Content -->
             </div>
         </div>
-    </section>
+    </div>
+</section>
 @endsection

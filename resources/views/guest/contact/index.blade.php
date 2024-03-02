@@ -1,45 +1,121 @@
 @extends('layouts.guest.main') @section('content')
 <!-- Contact form-->
-<div class="bg-light rounded-4 py-5 px-4 px-md-5">
-    @if(session()->has('status'))
-    <div class="alert alert-success alert-dismissible mx-1" role="alert">
-        {{ session('status') }}
-    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+<!-- Contact Us: Start -->
+<section
+id="landingContact"
+class="section-py bg-body landing-contact"
+>
+<div class="container">
+    <div class="text-center mt-5 mb-3 pb-1">
+        <span class="badge bg-label-primary">Contact US</span>
     </div>
-    @endif
-    <div class="text-center mb-4">
-        <h1 class="fw-bolder">Get in touch</h1>
-        <p class="lead fw-normal text-muted mb-0">
-            Let's work together!
-        </p>
-    </div>
-    <div class="row gx-5 justify-content-center">
-        <div class="col-sm-11 col-md-11 col-lg-8 col-xl-6">
-
-            <form
-            method="POST"
-            action="/contacts"
-            />
-            @method('post')
-            @csrf
-                <div class="card-body">
-                    <form>
-                        <div class="mb-3">
-                            <label
-                                class="form-label"
-                                for="name"
-                                >Full Name</label
-                            >
+    <h3 class="text-center mb-1">Let's work together</h3>
+    <p class="text-center mb-4 mb-lg-5 pb-md-3">
+        Any question or remark? just write us a message
+    </p>
+    <div class="row gy-4">
+        <div class="col-lg-5">
+            <div
+                class="contact-img-box position-relative border p-2 h-100"
+            >
+                <img
+                    src="{{ asset('../admin/assets/img/front-pages/icons/contact-border.png') }}"
+                    alt="contact border"
+                    class="contact-border-img position-absolute d-none d-md-block scaleX-n1-rtl"
+                />
+                <img
+                    src="{{ asset('../admin/assets/img/front-pages/landing-page/contact-customer-service.png') }}"
+                    alt="contact customer service"
+                    class="contact-img w-100 scaleX-n1-rtl"
+                />
+                <div class="pt-3 px-4 pb-1">
+                    <div class="row gy-3 gx-md-4">
+                        <div
+                            class="col-md-6 col-lg-12 col-xl-6"
+                        >
                             <div
-                                class="input-group input-group-merge"
+                                class="d-flex align-items-center"
                             >
-                                <span
-                                    id="name"
-                                    class="input-group-text"
-                                    ><i
-                                        class="bx bx-user"
-                                    ></i
-                                ></span>
+                                <div
+                                    class="badge bg-label-primary rounded p-2 me-2"
+                                >
+                                    <i
+                                        class="bx bx-envelope bx-sm"
+                                    ></i>
+                                </div>
+                                <div>
+                                    <p class="mb-0">Email</p>
+                                    <h5 class="mb-0">
+                                        <a
+                                            href="mailto:fadli.dev@byteq.my.id"
+                                            class="text-heading"
+                                            >fadli.dev@byteq.my.id</a
+                                        >
+                                    </h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="col-md-6 col-lg-12 col-xl-6"
+                        >
+                            <div
+                                class="d-flex align-items-center"
+                            >
+                                <div
+                                    class="badge bg-label-success rounded p-2 me-2"
+                                >
+                                    <i
+                                        class="bx bx-phone-call bx-sm"
+                                    ></i>
+                                </div>
+                                <div>
+                                    <p class="mb-0">Phone</p>
+                                    <h5 class="mb-0">
+                                        <a
+                                            href="tel:+62 878 1515 5215"
+                                            class="text-heading"
+                                            >+62 878 1515 5215</a
+                                        >
+                                    </h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-7">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="mb-1">Send a message</h4>
+                    @if(session()->has('status'))
+                    <div class="alert alert-success alert-dismissible mx-auto" role="alert">
+                        {{ session('status') }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                    @endif
+                    <p class="mb-4">
+                        If you would like to discuss anything
+                        related to payment, account,
+                        licensing,<br
+                            class="d-none d-lg-block"
+                        />
+                        partnerships, or have pre-sales
+                        questions, you’re at the right place.
+                    </p>
+                    <form
+                    method="POST"
+                    action="/contacts"
+                    />
+                    @method('post')
+                    @csrf   
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <label
+                                    class="form-label"
+                                    for="contact-form-fullname"
+                                    >Full Name</label
+                                >
                                 <input
                                     type="text"
                                     class="form-control @error('name') is-invalid @enderror"
@@ -49,7 +125,6 @@
                                     placeholder="Fadli Dev"
                                     aria-label="Fadli Dev"
                                     aria-describedby="name2"
-                                    autofocus
                                     required
                                 />
                                 @error('name')
@@ -58,30 +133,20 @@
                                 </div>
                                 @enderror
                             </div>
-                        </div>
-                        <div class="mb-3">
-                            <label
-                                class="form-label"
-                                for="email"
-                                >Email</label
-                            >
-                            <div
-                                class="input-group input-group-merge"
-                            >
-                                <span
-                                    class="input-group-text"
-                                    ><i
-                                        class="bx bx-envelope"
-                                    ></i
-                                ></span>
+                            <div class="col-md-6">
+                                <label
+                                    class="form-label"
+                                    for="contact-form-email"
+                                    >Email</label
+                                >
                                 <input
                                     type="text"
                                     id="email"
                                     name="email"
                                     value="{{ old('email') }}"
                                     class="form-control @error('email') is-invalid @enderror"
-                                    placeholder="fadli.dev"
-                                    aria-label="fadli.dev"
+                                    placeholder="fadli.dev@byteq.my.id"
+                                    aria-label="fadli.dev@byteq.my.id"
                                     aria-describedby="email2"
                                     required
                                     
@@ -91,33 +156,13 @@
                                     {{ $message }}
                                 </div>
                                 @enderror
-                                <span
-                                    id="email2"
-                                    class="input-group-text"
-                                    >@byteq.my.id</span
+                            </div>
+                            <div class="col-md-6">
+                                <label
+                                    class="form-label"
+                                    for="contact-form-email"
+                                    >Phone</label
                                 >
-                            </div>
-                            <div class="form-text">
-                                You can use letters,
-                                numbers & periods
-                            </div>
-                        </div>
-                        <div class="mb-3">
-                            <label
-                                class="form-label"
-                                for="phone"
-                                >Phone</label
-                            >
-                            <div
-                                class="input-group input-group-merge"
-                            >
-                                <span
-                                    id="phone2"
-                                    class="input-group-text"
-                                    ><i
-                                        class="bx bx-phone"
-                                    ></i
-                                ></span>
                                 <input
                                     type="text"
                                     id="phone"
@@ -129,24 +174,18 @@
                                     aria-describedby="phone2"
                                     required
                                 />
+                                @error('phone')
+                                <div class="invalid-feedback">
+                                    {{ $message }}
+                                </div>
+                                @enderror
                             </div>
-                        </div>
-                        <div class="mb-3">
-                            <label
-                                class="form-label"
-                                for="message"
-                                >Message</label
-                            >
-                            <div
-                                class="input-group input-group-merge"
-                            >
-                                <span
-                                    id="message2"
-                                    class="input-group-text"
-                                    ><i
-                                        class="bx bx-comment"
-                                    ></i
-                                ></span>
+                            <div class="col-12">
+                                <label
+                                    class="form-label"
+                                    for="contact-form-message"
+                                    >Message</label
+                                >
                                 <textarea
                                     id="message"
                                     name="message"
@@ -162,19 +201,21 @@
                                 </div>
                                 @enderror
                             </div>
-                        </div>
-                        <div class="d-grid mt-4">
-                            <button
-                            type="submit"
-                            class="btn btn-primary"
-                            >
-                                Send
-                            </button>
+                            <div class="col-12">
+                                <button
+                                    type="submit"
+                                    class="btn btn-primary"
+                                >
+                                    Send inquiry
+                                </button>
+                            </div>
                         </div>
                     </form>
                 </div>
-            </form>
+            </div>
         </div>
     </div>
 </div>
+</section>
+<!-- Contact Us: End -->
 @endsection

@@ -7,14 +7,17 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\GuestFaqController;
 use App\Http\Controllers\PasswordController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\AdminUserController;
 use App\Http\Controllers\GuestHomeController;
+use App\Http\Controllers\GuestTeamController;
 use App\Http\Controllers\GuestResumeController;
 use App\Http\Controllers\GuestProjectController;
 use App\Http\Controllers\DashboardBlogController;
 use App\Http\Controllers\DashboardContactContrlloer;
+use App\Http\Controllers\GuestTestimonialController;
 
 /*
 |--------------------------------------------------------------------------
@@ -59,10 +62,20 @@ Route::get('admin/dashboard', function () {
     return view('admin/dashboard/index', $data);
 })->middleware('auth');
 
+Route::get('pages', function () {
+    $data = [
+        'tittle' => 'Pages',
+        'subtittle' => 'Your Pages'
+    ];
+    return view('guest/pages/index', $data);
+})->middleware('guest');
+
 // Guest
 Route::get('/', [GuestHomeController::class, 'index']);
-Route::get('/resumes', [GuestResumeController::class, 'index']);
+Route::get('/testimonials', [GuestTestimonialController::class, 'index']);
 Route::get('/projects', [GuestProjectController::class, 'index']);
-Route::get('/contacts', [ContactController::class, 'index']);
+Route::get('/teams', [GuestTeamController::class, 'index']);
 Route::get('/blogs', [BlogController::class, 'index']);
 Route::get('/blog/{blog:slug}', [BlogController::class, 'show']);
+Route::get('/contacts', [ContactController::class, 'index']);
+Route::get('/faq', [GuestFaqController::class, 'index']);
