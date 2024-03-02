@@ -79,7 +79,7 @@
     <!-- Hero: End -->
 
     <!-- Useful features: Start -->
-    {{-- <section id="landingFeatures" class="section-py landing-features">
+    <section id="landingFeatures" class="section-py landing-features">
         <div class="container">
             <div class="text-center mb-3 pb-1">
                 <span class="badge bg-label-primary"
@@ -186,7 +186,7 @@
                 </div>
             </div>
         </div>
-    </section> --}}
+    </section>
     <!-- Useful features: End -->
 </div>
 @endforeach

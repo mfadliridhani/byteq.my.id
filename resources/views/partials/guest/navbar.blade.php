@@ -1,5 +1,5 @@
 <!-- Navbar: Start -->
-<nav class="layout-navbar shadow-none py-0">
+<nav class="layout-navbar shadow-none py-0 mb-5 bg-primary">
 <div class="container">
     <div
         class="navbar navbar-expand-lg landing-navbar px-3 px-md-4"

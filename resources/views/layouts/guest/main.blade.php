@@ -123,7 +123,7 @@
         <script src="{{ asset('../admin/assets/js/front-config.js') }}"></script>
     </head>
 
-    <body>
+    <body style="padding-top: 100px;>
         <!-- ?PROD Only: Google Tag Manager (noscript) (Default ThemeSelection: GTM-5DDHKGP, PixInvent: GTM-5J3LMKC) -->
         <noscript
             ><iframe

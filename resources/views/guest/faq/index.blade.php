@@ -4,7 +4,7 @@
     <!-- FAQ: Start -->
     <section id="landingFAQ" class="section-py bg-body landing-faq">
         <div class="container">
-            <div class="text-center mt-5 mb-3 pb-1">
+            <div class="text-center mb-3 pb-1">
                 <span class="badge bg-label-primary">FAQ</span>
             </div>
             <h3 class="text-center mb-1">Frequently asked questions</h3>

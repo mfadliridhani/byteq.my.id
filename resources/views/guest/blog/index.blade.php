@@ -6,7 +6,7 @@ id="landingContact"
 class="section-py bg-body landing-contact"
 >
     <div class="container">
-        <div class="text-center mt-5 mb-3 pb-1">
+        <div class="text-center mb-3 pb-1">
             <span class="badge bg-label-primary">Blogs</span>
         </div>
         <h3 class="text-center mb-1">Let's read the post</h3>

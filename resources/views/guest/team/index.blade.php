@@ -4,7 +4,7 @@
 <!-- Our great team: Start -->
 <section id="landingTeam" class="section-py landing-team">
     <div class="container">
-        <div class="text-center mt-5 mb-3 pb-1">
+        <div class="text-center mb-3 pb-1">
             <span class="badge bg-label-primary"
                 >{{ $tittle }}</span
             >

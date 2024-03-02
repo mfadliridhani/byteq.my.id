@@ -7,7 +7,7 @@ id="landingPricing"
 class="section-py bg-body landing-pricing"
 >
 <div class="container">
-    <div class="text-center mt-5 mb-3 pb-1">
+    <div class="text-center mb-3 pb-1">
         <span class="badge bg-label-primary"
             >Pricing Plans</span
         >
