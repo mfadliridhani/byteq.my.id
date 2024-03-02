@@ -10,7 +10,7 @@ class="section-py bg-body landing-contact"
             <span class="badge bg-label-primary">Blogs</span>
         </div>
         <h3 class="text-center mb-1">Let's read the post</h3>
-        <p class="text-center mb-4 mb-lg-5 pb-md-3">
+        <p class="text-center mb-1 mb-lg-1 pb-md-3">
             {{ $tittle }}
         </p>
         <div class="row gy-4">
@@ -113,8 +113,6 @@ class="section-py bg-body landing-contact"
                     <!-- Examples -->
                 </div>
                 <!-- / Content -->
-            
-                <div class="content-backdrop fade"></div>
             </div>
         </div>
     </div>

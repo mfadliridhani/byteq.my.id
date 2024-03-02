@@ -1,5 +1,5 @@
 <!-- Footer: Start -->
-<footer class="landing-footer bg-body footer-text">
+<footer class="landing-footer footer-text">
     <div class="footer-top position-relative overflow-hidden z-1">
         <img
             src="{{ asset('../admin/assets/img/front-pages/backgrounds/footer-bg-light.png') }}"

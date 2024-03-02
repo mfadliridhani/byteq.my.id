@@ -2,7 +2,7 @@
 
 @section('content')
 <!-- Our great team: Start -->
-<section id="landingTeam" class="section-py landing-team">
+<section id="landingTeam" class="section-py bg-body landing-team">
     <div class="container">
         <div class="text-center mb-3 pb-1">
             <span class="badge bg-label-primary"

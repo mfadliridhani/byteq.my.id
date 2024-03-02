@@ -62,11 +62,11 @@
         <!-- End Google Tag Manager -->
 
         <!-- Favicon -->
-        <link
+        {{-- <link
             rel="icon"
             type="image/x-icon"
             href="{{ asset('../admin/assets/img/favicon/favicon.ico') }}"
-        />
+        /> --}}
 
         <!-- Fonts -->
         <link rel="preconnect" href="{{ asset('https://fonts.googleapis.com') }}" />
@@ -123,7 +123,7 @@
         <script src="{{ asset('../admin/assets/js/front-config.js') }}"></script>
     </head>
 
-    <body style="padding-top: 100px;>
+    <body class="bg-body" style="padding-top: 100px;>
         <!-- ?PROD Only: Google Tag Manager (noscript) (Default ThemeSelection: GTM-5DDHKGP, PixInvent: GTM-5J3LMKC) -->
         <noscript
             ><iframe

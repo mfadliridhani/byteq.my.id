@@ -438,7 +438,7 @@ class="section-py bg-body landing-pricing"
 <!-- Pricing plans: End -->
 
 <!-- CTA: Start -->
-<section
+{{-- <section
 id="landingCTA"
 class="section-py landing-cta position-relative mt-5 p-lg-0 pb-0"
 >
@@ -471,7 +471,7 @@ class="section-py landing-cta position-relative mt-5 p-lg-0 pb-0"
         </div>
     </div>
 </div>
-</section>
+</section> --}}
 <!-- CTA: End -->
 
 <!-- Fun facts: Start -->
